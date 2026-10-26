@@ -104,6 +104,6 @@ Analyses were performed to understand trip behaviors by user category (*Business
 | **Weekend** | Meeting | 9 | 85 | **10.59%** |
 
 **Key Insights:**
-* **Efficiency Overview**: The majority of trips run smoothly (speeds $> 40 \text{ km/h}$)[cite: 12]. Inefficient trips drop to an average speed of $\sim 20 \text{ km/h}$ despite having shorter average distances.
-* **Peak Congestion Windows**: On weekdays, 16:00 has the highest proportion of bottlenecked trips (17.39%)[cite: 13]. On weekends, 13:00 sees the highest inefficiency rate (23.08%).
-* **Most Impacted Purposes**: Weekday business travel to *Temporary Sites* (12.90%) and *Meal/Entertain* (12.22%) encounter the most traffic delays[cite: 14], whereas weekend trips for *Errand/Supplies* experience a 16.00% inefficiency rate.
+* **Efficiency Overview**: The majority of trips run smoothly (speeds $> 40 \text{ km/h}$). Inefficient trips drop to an average speed of $\sim 20 \text{ km/h}$ despite having shorter average distances.
+* **Peak Congestion Windows**: On weekdays, 16:00 has the highest proportion of bottlenecked trips (17.39%). On weekends, 13:00 sees the highest inefficiency rate (23.08%).
+* **Most Impacted Purposes**: Weekday business travel to *Temporary Sites* (12.90%) and *Meal/Entertain* (12.22%) encounter the most traffic delays, whereas weekend trips for *Errand/Supplies* experience a 16.00% inefficiency rate.
