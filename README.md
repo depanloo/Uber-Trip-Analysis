@@ -1,20 +1,22 @@
 # Uber Trip Data Analysis
 
-## 1. The Problem & Objectives
-As a leader in the ride-hailing industry, efficiency and ride experience are the primary operational focuses for Uber. This analysis project has three key objectives:
-* **Describe general trip patterns** through metrics such as total trips, daily averages, duration, and distance, segmented by user category and day type (weekday vs. weekend).
-* **Identify peak hours** to understand service demand dynamics, including discovering the top 10 busiest days and hours.
-* **Evaluate trip efficiency** based on average speed to locate potential bottlenecks and traffic congestion.
+## 1. Business Context & Objectives
+As a leader in the ride-hailing industry, operational efficiency and driver-rider match rates are critical metrics. This analysis project focuses on three key operational objectives:
+* **Trip Pattern Profiling:** Evaluate volume, trip duration, and distance segmented by user category (Business vs. Personal) and day type (Weekday vs. Weekend).
+* **Demand Dynamics & Peak Hours:** Identify high-demand time windows and the top 10 busiest hours across the week.
+* **Operational Efficiency & Traffic Bottlenecks:** Classify trip efficiency based on average speed thresholds to pinpoint high-congestion windows and affected trip purposes.
 
 ---
 
-## 2. Data & Approach
-* **Dataset**: Uber trip dataset consisting of 17 dimensions/columns and 1,141 rows. The dataset was already pre-cleaned, requiring no further data cleaning steps.
-* **Analytical Approach**: Distance metrics were converted from miles to kilometers ($km$) and speed to $km/h$. Speed thresholds were categorized into three efficiency levels:
-  * **Efficient**: $> 40 \text{ km/h}$
-  * **Moderate**: $25 - 40 \text{ km/h}$
-  * **Inefficient**: $< 25 \text{ km/h}$
-* **Tech Stack**: SQL (Google BigQuery).
+## 2. Data & Process
+* **Dataset:** Uber trip dataset containing 17 dimensions and 1,141 transaction records.
+* **SQL Transformations & Engineering (Google BigQuery):**
+  * Converted distance units from miles to kilometers ($km$) and calculated trip speed ($km/h$).
+  * Formatted timestamp fields into hourly and day-of-week dimensions.
+  * Categorized speed thresholds into three efficiency categories using SQL `CASE WHEN` logic:
+    * **Efficient:** $> 40 \text{ km/h}$
+    * **Moderate:** $25 - 40 \text{ km/h}$
+    * **Inefficient:** $< 25 \text{ km/h}$
 
 ---
 
@@ -107,3 +109,12 @@ Analyses were performed to understand trip behaviors by user category (*Business
 * **Efficiency Overview**: The majority of trips run smoothly (speeds $> 40 \text{ km/h}$). Inefficient trips drop to an average speed of $\sim 20 \text{ km/h}$ despite having shorter average distances.
 * **Peak Congestion Windows**: On weekdays, 16:00 has the highest proportion of bottlenecked trips (17.39%). On weekends, 13:00 sees the highest inefficiency rate (23.08%).
 * **Most Impacted Purposes**: Weekday business travel to *Temporary Sites* (12.90%) and *Meal/Entertain* (12.22%) encounter the most traffic delays, whereas weekend trips for *Errand/Supplies* experience a 16.00% inefficiency rate.
+
+---
+
+## 4. Actionable Business Recommendations
+1. **Dynamic Driver Supply Allocation (13:00 & 16:00–18:00):** Pre-position driver fleets near commercial hubs before 13:00 on Fridays and 16:00 on weekdays to reduce rider wait times during peak bottleneck hours.
+2. **Targeted Corporate Promotions:** Since business trips drive over 90% of platform revenue, introduce corporate subscription plans or priority dispatching for business accounts during weekday rush hours.
+3. **Alternative Route Optimization:** Implement real-time navigation rerouting for trips categorized under *Temporary Site* and *Meal/Entertain* during the 16:00 weekday window to bypass localized traffic bottlenecks.
+4. **Weekend Long-Distance Incentives:** Offer bonus incentives for drivers accepting long-distance weekend personal trips ($44.5 \text{ km}$ avg), compensating for longer travel times and ensuring high acceptance rates.
+
