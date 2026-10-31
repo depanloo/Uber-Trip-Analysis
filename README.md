@@ -6,7 +6,7 @@
 |---|---|
 | **Tools** | Google BigQuery (SQL: CTEs, window functions, `QUALIFY`, `COUNTIF`, `PERCENTILE_CONT`), Python + Matplotlib (chart) |
 | **Type** | Individual project |
-| **Data** | `data/UberDatasetCleaned.csv`, public personal trip-log dataset. *Source link: add here.* |
+| **Data** | `data/UberDatasetCleaned.csv`, public personal trip-log dataset. |
 
 ---
 
